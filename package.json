@@ -1,0 +1,21 @@
+{
+  "name": "spotireact",
+  "version": "1.0.0",
+  "description": "spotify api consumer with reactjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/gnzandrs/SpotiReact"
+  },
+  "keywords": [
+    "react",
+    "spotify",
+    "api",
+    "js"
+  ],
+  "author": "@gnzandrs",
+  "license": "ISC"
+}
