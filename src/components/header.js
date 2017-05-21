@@ -1,11 +1,11 @@
 import React from 'react'
 
 function Header () {
-  render () {
-    <header className="header">
-      <h1>SpotiReact<h1>
+  return (
+    <header className="header clearfix">
+      <h1 className="text-muted logo">SpotiReact</h1>
     </header>
-  }
+  )
 }
 
 export default Header

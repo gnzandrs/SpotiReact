@@ -1,12 +1,11 @@
 import React from 'react'
 
 function Footer () {
-  render () {
+  return (
     <footer className="footer">
-      <img src="./assets/images/react.png">
-      <img src="./assets/images/spotify.png">
+      <p>ReactJs | Spotify API | Bootstrap </p>
     </footer>
-  }
+  )
 }
 
 export default Footer
