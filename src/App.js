@@ -19,6 +19,8 @@ class App extends React.Component {
     }
 
     this.searchTracks = this.searchTracks.bind(this)
+    this.playTrack = this.playTrack.bind(this)
+    this.pauseTrack = this.pauseTrack.bind(this)
   }
 
   async searchTracks ({target}) {
@@ -31,12 +33,31 @@ class App extends React.Component {
       }
   }
 
-  playTrack () {
+  playTrack ({target}, preview, trackId) {
+    if (this.audio) {
+      if (trackId === this.state.trackPlaying) {
+        this.audio.play()
+        return this.setState({trackPaused: true})
+      }
 
+      this.audio.src = preview
+      this.audio.play()
+    }
+    else {
+        this.audio = new window.Audio(preview)
+        this.audio.play()
+    }
+
+    this.setState({trackPlaying: trackId})
+
+    this.audio.addEventListener('ended', (e) => {
+      this.setState({trackPaused: true})
+    })
   }
 
   pauseTrack () {
-
+    this.setState({trackPaused: false})
+    this.audio.pause()
   }
 
   render () {
@@ -44,7 +65,13 @@ class App extends React.Component {
       <div className="container">
         <Header />
         <Search searchTracks={this.searchTracks} />
-        <Tracks tracks={this.state.tracks}/>
+        <Tracks
+          tracks= {this.state.tracks}
+          playTrack = {this.playTrack}
+          pauseTrack = {this.pauseTrack}
+          trackPlaying = {this.state.trackPlaying}
+          trackPaused = {this.state.trackPaused}
+        />
       </div>
     )
   }
