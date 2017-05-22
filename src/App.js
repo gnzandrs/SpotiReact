@@ -51,8 +51,10 @@ class App extends React.Component {
     this.setState({trackPlaying: trackId})
 
     this.audio.addEventListener('ended', (e) => {
-      this.setState({trackPaused: true})
+      this.setState({trackPlaying: ''})
     })
+
+    this.setState({trackPaused: true})
   }
 
   pauseTrack () {

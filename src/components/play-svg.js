@@ -2,6 +2,7 @@ import React from 'react'
 
 function PlaySvg ({preview, playTrack, trackId, isTrackPlaying, trackPaused}) {
   let display = trackPaused && isTrackPlaying ? 'u-displayNone' : 'u-displayBlock'
+
   return (
     <svg width='35px' height='35px' className={display} onClick={(e) => playTrack(e, preview, trackId) } viewBox='901 365 35 35' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'>
         <desc>Created with Sketch.</desc>

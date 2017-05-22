@@ -21859,8 +21859,10 @@ var App = function (_React$Component) {
       this.setState({ trackPlaying: trackId });
 
       this.audio.addEventListener('ended', function (e) {
-        _this2.setState({ trackPaused: true });
+        _this2.setState({ trackPlaying: '' });
       });
+
+      this.setState({ trackPaused: true });
     }
   }, {
     key: 'pauseTrack',
@@ -22015,6 +22017,7 @@ function PlaySvg(_ref) {
         trackPaused = _ref.trackPaused;
 
     var display = trackPaused && isTrackPlaying ? 'u-displayNone' : 'u-displayBlock';
+
     return _react2.default.createElement(
         'svg',
         { width: '35px', height: '35px', className: display, onClick: function onClick(e) {
@@ -22135,7 +22138,7 @@ function Track(_ref) {
         track.name
       ),
       _react2.default.createElement(_playSvg2.default, {
-        preview: track.peview_url,
+        preview: track.preview_url,
         playTrack: playTrack,
         trackId: track.id,
         isTrackPlaying: isTrackPlaying,
