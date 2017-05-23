@@ -21901,23 +21901,46 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Footer() {
-  return _react2.default.createElement(
-    "footer",
-    { className: "footer" },
-    _react2.default.createElement(
-      "p",
-      null,
-      "ReactJs | Spotify API | Bootstrap "
-    )
-  );
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "footer",
+        { className: "footer" },
+        _react2.default.createElement(
+          "p",
+          null,
+          "ReactJs | Spotify API | Bootstrap "
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(_react2.default.Component);
 
 exports.default = Footer;
 
@@ -21928,23 +21951,46 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Header() {
-  return _react2.default.createElement(
-    "header",
-    { className: "header clearfix" },
-    _react2.default.createElement(
-      "h1",
-      { className: "text-muted logo" },
-      "SpotiReact"
-    )
-  );
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = function (_React$Component) {
+  _inherits(Header, _React$Component);
+
+  function Header() {
+    _classCallCheck(this, Header);
+
+    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "header",
+        { className: "header clearfix" },
+        _react2.default.createElement(
+          "h1",
+          { className: "text-muted logo" },
+          "SpotiReact"
+        )
+      );
+    }
+  }]);
+
+  return Header;
+}(_react2.default.Component);
 
 exports.default = Header;
 
@@ -21955,44 +22001,63 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function PauseSvg(_ref) {
-    var pauseTrack = _ref.pauseTrack,
-        isTrackPlaying = _ref.isTrackPlaying,
-        trackPaused = _ref.trackPaused;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    var display = trackPaused && isTrackPlaying ? 'u-displayBlock' : 'u-displayNone';
-    return _react2.default.createElement(
-        'svg',
-        { width: '35px', height: '35px', className: display, onClick: pauseTrack, viewBox: '901 369 35 35', version: '1.1', xmlns: 'http://www.w3.org/2000/svg', xmlnsXlink: 'http://www.w3.org/1999/xlink' },
-        _react2.default.createElement(
-            'desc',
-            null,
-            'Created with Sketch.'
-        ),
-        _react2.default.createElement('defs', null),
-        _react2.default.createElement(
-            'g',
-            { id: 'pause', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd', transform: 'translate(901.000000, 369.000000)' },
-            _react2.default.createElement(
-                'g',
-                { id: 'Capa_1', fillRule: 'nonzero', fill: '#FFFFFF' },
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PauseSvg = function (_React$Component) {
+    _inherits(PauseSvg, _React$Component);
+
+    function PauseSvg() {
+        _classCallCheck(this, PauseSvg);
+
+        return _possibleConstructorReturn(this, (PauseSvg.__proto__ || Object.getPrototypeOf(PauseSvg)).apply(this, arguments));
+    }
+
+    _createClass(PauseSvg, [{
+        key: 'render',
+        value: function render() {
+            var display = this.props.trackPaused && this.props.isTrackPlaying ? 'u-displayBlock' : 'u-displayNone';
+            return _react2.default.createElement(
+                'svg',
+                { width: '35px', height: '35px', className: display, onClick: this.props.pauseTrack, viewBox: '901 369 35 35', version: '1.1', xmlns: 'http://www.w3.org/2000/svg', xmlnsXlink: 'http://www.w3.org/1999/xlink' },
+                _react2.default.createElement(
+                    'desc',
+                    null,
+                    'Created with Sketch.'
+                ),
+                _react2.default.createElement('defs', null),
                 _react2.default.createElement(
                     'g',
-                    { id: 'Group' },
-                    _react2.default.createElement('path', { d: 'M13.8066102,12.9160546 L13.8066102,22.6506685 C13.8066102,23.6686347 15.3972316,23.6686347 15.3972316,22.6506685 L15.3972316,12.9160546 C15.3972316,11.8980226 13.8066102,11.8980226 13.8066102,12.9160546 L13.8066102,12.9160546 Z', id: 'Shape' }),
-                    _react2.default.createElement('path', { d: 'M20.1054896,12.9160546 L20.1054896,22.6506685 C20.1054896,23.6686347 21.6961111,23.6686347 21.6961111,22.6506685 L21.6961111,12.9160546 C21.6961111,11.8980226 20.1054896,11.8980226 20.1054896,12.9160546 L20.1054896,12.9160546 Z', id: 'Shape' }),
-                    _react2.default.createElement('path', { d: 'M17.4968362,34.9938701 C7.82589454,34.9938701 0,27.1043691 0,17.4970339 C0,7.82602637 7.88950094,0.000197740113 17.4968362,0.000197740113 C27.1678437,0.000197740113 34.9936723,7.88969868 34.9936723,17.4970339 C35.0573446,27.1680414 27.1678437,34.9938701 17.4968362,34.9938701 Z M17.4968362,1.52721281 C8.71658192,1.52721281 1.59062147,8.65317326 1.59062147,17.4334275 C1.59062147,26.2136817 8.71658192,33.3396422 17.4968362,33.3396422 C26.2770904,33.3396422 33.4030508,26.2136817 33.4030508,17.4334275 C33.4667232,8.71677966 26.3406968,1.52721281 17.4968362,1.52721281 Z', id: 'Shape' })
+                    { id: 'pause', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd', transform: 'translate(901.000000, 369.000000)' },
+                    _react2.default.createElement(
+                        'g',
+                        { id: 'Capa_1', fillRule: 'nonzero', fill: '#FFFFFF' },
+                        _react2.default.createElement(
+                            'g',
+                            { id: 'Group' },
+                            _react2.default.createElement('path', { d: 'M13.8066102,12.9160546 L13.8066102,22.6506685 C13.8066102,23.6686347 15.3972316,23.6686347 15.3972316,22.6506685 L15.3972316,12.9160546 C15.3972316,11.8980226 13.8066102,11.8980226 13.8066102,12.9160546 L13.8066102,12.9160546 Z', id: 'Shape' }),
+                            _react2.default.createElement('path', { d: 'M20.1054896,12.9160546 L20.1054896,22.6506685 C20.1054896,23.6686347 21.6961111,23.6686347 21.6961111,22.6506685 L21.6961111,12.9160546 C21.6961111,11.8980226 20.1054896,11.8980226 20.1054896,12.9160546 L20.1054896,12.9160546 Z', id: 'Shape' }),
+                            _react2.default.createElement('path', { d: 'M17.4968362,34.9938701 C7.82589454,34.9938701 0,27.1043691 0,17.4970339 C0,7.82602637 7.88950094,0.000197740113 17.4968362,0.000197740113 C27.1678437,0.000197740113 34.9936723,7.88969868 34.9936723,17.4970339 C35.0573446,27.1680414 27.1678437,34.9938701 17.4968362,34.9938701 Z M17.4968362,1.52721281 C8.71658192,1.52721281 1.59062147,8.65317326 1.59062147,17.4334275 C1.59062147,26.2136817 8.71658192,33.3396422 17.4968362,33.3396422 C26.2770904,33.3396422 33.4030508,26.2136817 33.4030508,17.4334275 C33.4667232,8.71677966 26.3406968,1.52721281 17.4968362,1.52721281 Z', id: 'Shape' })
+                        )
+                    )
                 )
-            )
-        )
-    );
-}
+            );
+        }
+    }]);
+
+    return PauseSvg;
+}(_react2.default.Component);
 
 exports.default = PauseSvg;
 
@@ -22003,48 +22068,66 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function PlaySvg(_ref) {
-    var preview = _ref.preview,
-        playTrack = _ref.playTrack,
-        trackId = _ref.trackId,
-        isTrackPlaying = _ref.isTrackPlaying,
-        trackPaused = _ref.trackPaused;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    var display = trackPaused && isTrackPlaying ? 'u-displayNone' : 'u-displayBlock';
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    return _react2.default.createElement(
-        'svg',
-        { width: '35px', height: '35px', className: display, onClick: function onClick(e) {
-                return playTrack(e, preview, trackId);
-            }, viewBox: '901 365 35 35', version: '1.1', xmlns: 'http://www.w3.org/2000/svg', xmlnsXlink: 'http://www.w3.org/1999/xlink' },
-        _react2.default.createElement(
-            'desc',
-            null,
-            'Created with Sketch.'
-        ),
-        _react2.default.createElement('defs', null),
-        _react2.default.createElement(
-            'g',
-            { id: 'play-button', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd', transform: 'translate(901.000000, 365.000000)' },
-            _react2.default.createElement(
-                'g',
-                { id: 'Capa_1', fillRule: 'nonzero', fill: '#FFFFFF' },
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlaySvg = function (_React$Component) {
+    _inherits(PlaySvg, _React$Component);
+
+    function PlaySvg() {
+        _classCallCheck(this, PlaySvg);
+
+        return _possibleConstructorReturn(this, (PlaySvg.__proto__ || Object.getPrototypeOf(PlaySvg)).apply(this, arguments));
+    }
+
+    _createClass(PlaySvg, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var display = this.props.trackPaused && this.props.isTrackPlaying ? 'u-displayNone' : 'u-displayBlock';
+            return _react2.default.createElement(
+                'svg',
+                { width: '35px', height: '35px', className: display, onClick: function onClick(e) {
+                        return _this2.props.playTrack(e, _this2.props.preview, _this2.props.trackId);
+                    }, viewBox: '901 365 35 35', version: '1.1', xmlns: 'http://www.w3.org/2000/svg', xmlnsXlink: 'http://www.w3.org/1999/xlink' },
+                _react2.default.createElement(
+                    'desc',
+                    null,
+                    'Created with Sketch.'
+                ),
+                _react2.default.createElement('defs', null),
                 _react2.default.createElement(
                     'g',
-                    { id: 'Group' },
-                    _react2.default.createElement('path', { d: 'M26.5784167,17.0181667 L13.7450833,8.26816667 C13.566,8.14683333 13.335,8.13341667 13.1436667,8.23433333 C12.9529167,8.33525 12.8333333,8.53358333 12.8333333,8.75 L12.8333333,26.25 C12.8333333,26.4664167 12.9529167,26.66475 13.14425,26.7656667 C13.2294167,26.8111667 13.3233333,26.8333333 13.4166667,26.8333333 C13.5315833,26.8333333 13.6465,26.7989167 13.7450833,26.7318333 L26.5784167,17.9818333 C26.7376667,17.8733333 26.8333333,17.6930833 26.8333333,17.5 C26.8333333,17.3069167 26.7376667,17.1266667 26.5784167,17.0181667 Z M14,25.14575 L14,9.85425 L25.2145833,17.5 L14,25.14575 Z', id: 'Shape' }),
-                    _react2.default.createElement('path', { d: 'M17.5,0 C7.8505,0 0,7.8505 0,17.5 C0,27.1495 7.8505,35 17.5,35 C27.1495,35 35,27.1495 35,17.5 C35,7.8505 27.1495,0 17.5,0 Z M17.5,33.8333333 C8.49391667,33.8333333 1.16666667,26.5060833 1.16666667,17.5 C1.16666667,8.49391667 8.49391667,1.16666667 17.5,1.16666667 C26.5060833,1.16666667 33.8333333,8.49391667 33.8333333,17.5 C33.8333333,26.5060833 26.5060833,33.8333333 17.5,33.8333333 Z', id: 'Shape' })
+                    { id: 'play-button', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd', transform: 'translate(901.000000, 365.000000)' },
+                    _react2.default.createElement(
+                        'g',
+                        { id: 'Capa_1', fillRule: 'nonzero', fill: '#FFFFFF' },
+                        _react2.default.createElement(
+                            'g',
+                            { id: 'Group' },
+                            _react2.default.createElement('path', { d: 'M26.5784167,17.0181667 L13.7450833,8.26816667 C13.566,8.14683333 13.335,8.13341667 13.1436667,8.23433333 C12.9529167,8.33525 12.8333333,8.53358333 12.8333333,8.75 L12.8333333,26.25 C12.8333333,26.4664167 12.9529167,26.66475 13.14425,26.7656667 C13.2294167,26.8111667 13.3233333,26.8333333 13.4166667,26.8333333 C13.5315833,26.8333333 13.6465,26.7989167 13.7450833,26.7318333 L26.5784167,17.9818333 C26.7376667,17.8733333 26.8333333,17.6930833 26.8333333,17.5 C26.8333333,17.3069167 26.7376667,17.1266667 26.5784167,17.0181667 Z M14,25.14575 L14,9.85425 L25.2145833,17.5 L14,25.14575 Z', id: 'Shape' }),
+                            _react2.default.createElement('path', { d: 'M17.5,0 C7.8505,0 0,7.8505 0,17.5 C0,27.1495 7.8505,35 17.5,35 C27.1495,35 35,27.1495 35,17.5 C35,7.8505 27.1495,0 17.5,0 Z M17.5,33.8333333 C8.49391667,33.8333333 1.16666667,26.5060833 1.16666667,17.5 C1.16666667,8.49391667 8.49391667,1.16666667 17.5,1.16666667 C26.5060833,1.16666667 33.8333333,8.49391667 33.8333333,17.5 C33.8333333,26.5060833 26.5060833,33.8333333 17.5,33.8333333 Z', id: 'Shape' })
+                        )
+                    )
                 )
-            )
-        )
-    );
-}
+            );
+        }
+    }]);
+
+    return PlaySvg;
+}(_react2.default.Component);
 
 exports.default = PlaySvg;
 
@@ -22055,43 +22138,64 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Search(_ref) {
-  var searchTracks = _ref.searchTracks;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return _react2.default.createElement(
-    "div",
-    { className: "row" },
-    _react2.default.createElement(
-      "div",
-      { className: "col-lg-4 col-lg-offset-4" },
-      _react2.default.createElement(
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Search = function (_React$Component) {
+  _inherits(Search, _React$Component);
+
+  function Search() {
+    _classCallCheck(this, Search);
+
+    return _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).apply(this, arguments));
+  }
+
+  _createClass(Search, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
         "div",
-        { className: "input-group" },
-        _react2.default.createElement("input", {
-          type: "text",
-          placeholder: "Write the name of the song...",
-          onChange: searchTracks,
-          className: "form-control"
-        }),
+        { className: "row" },
         _react2.default.createElement(
-          "span",
-          { className: "input-group-btn" },
+          "div",
+          { className: "col-lg-4 col-lg-offset-4" },
           _react2.default.createElement(
-            "button",
-            { className: "btn btn-default", type: "button" },
-            "Go!"
+            "div",
+            { className: "input-group" },
+            _react2.default.createElement("input", {
+              type: "text",
+              placeholder: "Write the name of the song...",
+              onChange: this.props.searchTracks,
+              className: "form-control"
+            }),
+            _react2.default.createElement(
+              "span",
+              { className: "input-group-btn" },
+              _react2.default.createElement(
+                "button",
+                { className: "btn btn-default", type: "button" },
+                "Go!"
+              )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
+  }]);
+
+  return Search;
+}(_react2.default.Component);
 
 exports.default = Search;
 
@@ -22101,6 +22205,8 @@ exports.default = Search;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -22116,54 +22222,70 @@ var _pauseSvg2 = _interopRequireDefault(_pauseSvg);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Track(_ref) {
-  var track = _ref.track,
-      playTrack = _ref.playTrack,
-      pauseTrack = _ref.pauseTrack,
-      trackPlaying = _ref.trackPlaying,
-      trackPaused = _ref.trackPaused;
-  var url = track.album.images[1].url;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var isTrackPlaying = track.id === trackPlaying && trackPaused ? 'Waves' : '';
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-  return _react2.default.createElement(
-    'article',
-    { className: 'track', style: { backgroundImage: 'url(' + url + ')' } },
-    _react2.default.createElement(
-      'div',
-      { className: 'track-info' },
-      _react2.default.createElement(
-        'h4',
-        null,
-        track.name
-      ),
-      _react2.default.createElement(_playSvg2.default, {
-        preview: track.preview_url,
-        playTrack: playTrack,
-        trackId: track.id,
-        isTrackPlaying: isTrackPlaying,
-        trackPaused: trackPaused
-      }),
-      _react2.default.createElement(_pauseSvg2.default, {
-        isTrackPlaying: isTrackPlaying,
-        trackPaused: trackPaused,
-        pauseTrack: pauseTrack
-      })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: '{isTrackPlaying}' },
-      _react2.default.createElement('span', null),
-      _react2.default.createElement('span', null),
-      _react2.default.createElement('span', null),
-      _react2.default.createElement('span', null),
-      _react2.default.createElement('span', null),
-      _react2.default.createElement('span', null),
-      _react2.default.createElement('span', null)
-    ),
-    _react2.default.createElement('span', null)
-  );
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Track = function (_React$Component) {
+  _inherits(Track, _React$Component);
+
+  function Track() {
+    _classCallCheck(this, Track);
+
+    return _possibleConstructorReturn(this, (Track.__proto__ || Object.getPrototypeOf(Track)).apply(this, arguments));
+  }
+
+  _createClass(Track, [{
+    key: 'render',
+    value: function render() {
+      var url = this.props.track.album.images[1].url;
+
+      var isTrackPlaying = this.props.track.id === this.props.trackPlaying && this.props.trackPaused ? 'Waves' : '';
+
+      return _react2.default.createElement(
+        'article',
+        { className: 'track', style: { backgroundImage: 'url(' + url + ')' } },
+        _react2.default.createElement(
+          'div',
+          { className: 'track-info' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            this.props.track.name
+          ),
+          _react2.default.createElement(_playSvg2.default, {
+            preview: this.props.track.preview_url,
+            playTrack: this.props.playTrack,
+            trackId: this.props.track.id,
+            isTrackPlaying: isTrackPlaying,
+            trackPaused: this.props.trackPaused
+          }),
+          _react2.default.createElement(_pauseSvg2.default, {
+            isTrackPlaying: isTrackPlaying,
+            trackPaused: this.props.trackPaused,
+            pauseTrack: this.props.pauseTrack
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: '{isTrackPlaying}' },
+          _react2.default.createElement('span', null),
+          _react2.default.createElement('span', null),
+          _react2.default.createElement('span', null),
+          _react2.default.createElement('span', null),
+          _react2.default.createElement('span', null),
+          _react2.default.createElement('span', null),
+          _react2.default.createElement('span', null)
+        ),
+        _react2.default.createElement('span', null)
+      );
+    }
+  }]);
+
+  return Track;
+}(_react2.default.Component);
 
 exports.default = Track;
 
@@ -22173,6 +22295,8 @@ exports.default = Track;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -22184,28 +22308,45 @@ var _track2 = _interopRequireDefault(_track);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Tracks(_ref) {
-  var tracks = _ref.tracks,
-      playTrack = _ref.playTrack,
-      pauseTrack = _ref.pauseTrack,
-      trackPlaying = _ref.trackPlaying,
-      trackPaused = _ref.trackPaused;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return _react2.default.createElement(
-    'div',
-    { className: 'tracks' },
-    tracks.map(function (track, i) {
-      return _react2.default.createElement(_track2.default, {
-        track: track,
-        playTrack: playTrack,
-        pauseTrack: pauseTrack,
-        trackPlaying: trackPlaying,
-        trackPaused: trackPaused,
-        key: i
-      });
-    })
-  );
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Tracks = function (_React$Component) {
+  _inherits(Tracks, _React$Component);
+
+  function Tracks() {
+    _classCallCheck(this, Tracks);
+
+    return _possibleConstructorReturn(this, (Tracks.__proto__ || Object.getPrototypeOf(Tracks)).apply(this, arguments));
+  }
+
+  _createClass(Tracks, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'tracks' },
+        this.props.tracks.map(function (track, i) {
+          return _react2.default.createElement(_track2.default, {
+            track: track,
+            playTrack: _this2.props.playTrack,
+            pauseTrack: _this2.props.pauseTrack,
+            trackPlaying: _this2.props.trackPlaying,
+            trackPaused: _this2.props.trackPaused,
+            key: i
+          });
+        })
+      );
+    }
+  }]);
+
+  return Tracks;
+}(_react2.default.Component);
 
 exports.default = Tracks;
 

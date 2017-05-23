@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Footer () {
-  return (
-    <footer className="footer">
-      <p>ReactJs | Spotify API | Bootstrap </p>
-    </footer>
-  )
+export default class Footer extends React.Component {
+  render () {
+    return (
+      <footer className="footer">
+        <p>ReactJs | Spotify API | Bootstrap </p>
+      </footer>
+    )
+  }
 }
-
-export default Footer

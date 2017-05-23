@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Search ({searchTracks}) {
+export default class Search extends React.Component {
+  render () {
     return (
             <div className="row">
               <div className="col-lg-4 col-lg-offset-4">
@@ -8,7 +9,7 @@ function Search ({searchTracks}) {
                   <input
                     type = 'text'
                     placeholder = 'Write the name of the song...'
-                    onChange = {searchTracks}
+                    onChange = {this.props.searchTracks}
                     className = "form-control"
                   />
                   <span className="input-group-btn">
@@ -18,6 +19,5 @@ function Search ({searchTracks}) {
               </div>
             </div>
     )
+  }
 }
-
-export default Search
