@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './components/header'
-import Search from './components/search'
-import Tracks from './components/tracks'
-import Footer from './components/footer'
+import Header from './header'
+import Search from './search'
+import Tracks from './tracks'
+import Footer from './footer'
 
-class App extends React.Component {
+export default class Main extends React.Component {
 
   constructor () {
     super ()
@@ -18,12 +18,12 @@ class App extends React.Component {
       loading: false
     }
 
-    this.searchTracks = this.searchTracks.bind(this)
-    this.playTrack = this.playTrack.bind(this)
-    this.pauseTrack = this.pauseTrack.bind(this)
+    this._searchTracks = this._searchTracks.bind(this)
+    this._playTrack = this._playTrack.bind(this)
+    this._pauseTrack = this._pauseTrack.bind(this)
   }
 
-  async searchTracks ({target}) {
+  async _searchTracks ({target}) {
       let {value} = target
 
       if (value) {
@@ -33,7 +33,7 @@ class App extends React.Component {
       }
   }
 
-  playTrack ({target}, preview, trackId) {
+  _playTrack ({target}, preview, trackId) {
     if (this.audio) {
       if (trackId === this.state.trackPlaying) {
         this.audio.play()
@@ -57,7 +57,7 @@ class App extends React.Component {
     this.setState({trackPaused: true})
   }
 
-  pauseTrack () {
+  _pauseTrack () {
     this.setState({trackPaused: false})
     this.audio.pause()
   }
@@ -66,11 +66,11 @@ class App extends React.Component {
     return (
       <div className="container">
         <Header />
-        <Search searchTracks={this.searchTracks} />
+        <Search searchTracks = {this._searchTracks} />
         <Tracks
-          tracks= {this.state.tracks}
-          playTrack = {this.playTrack}
-          pauseTrack = {this.pauseTrack}
+          tracks = {this.state.tracks}
+          playTrack = {this._playTrack}
+          pauseTrack = {this._pauseTrack}
           trackPlaying = {this.state.trackPlaying}
           trackPaused = {this.state.trackPaused}
         />
@@ -78,5 +78,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App
