@@ -2,7 +2,7 @@ import React from 'react'
 
 export default class PlaySvg extends React.Component {
   render () {
-    let display = this.props.trackPaused && this.props.isTrackPlaying ? 'u-displayNone' : 'u-displayBlock'
+    const display = this.props.trackPaused && this.props.isTrackPlaying ? 'u-displayNone' : 'u-displayBlock'
     return (
       <svg width='35px' height='35px' className={display} onClick={(e) => this.props.playTrack(e, this.props.preview, this.props.trackId) } viewBox='901 365 35 35' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'>
           <desc>Created with Sketch.</desc>

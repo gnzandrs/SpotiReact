@@ -5,7 +5,7 @@ import PauseSvg from './pause-svg'
 export default class Track extends React.Component {
   render () {
     const {url} = this.props.track.album.images[1]
-    let isTrackPlaying = this.props.track.id === this.props.trackPlaying && this.props.trackPaused ? 'Waves' : ''
+    const isTrackPlaying = this.props.track.id === this.props.trackPlaying && this.props.trackPaused ? 'Waves' : ''
 
     return (
       <article className='track' style={{backgroundImage:  `url(${url})`}}>

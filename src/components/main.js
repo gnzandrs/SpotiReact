@@ -74,6 +74,7 @@ export default class Main extends React.Component {
           trackPlaying = {this.state.trackPlaying}
           trackPaused = {this.state.trackPaused}
         />
+        <Footer />
       </div>
     )
   }

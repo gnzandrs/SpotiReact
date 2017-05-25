@@ -2,7 +2,7 @@ import React from 'react'
 
 export default class PauseSvg extends React.Component {
   render () {
-    let display = this.props.trackPaused && this.props.isTrackPlaying ? 'u-displayBlock' : 'u-displayNone'
+    const display = this.props.trackPaused && this.props.isTrackPlaying ? 'u-displayBlock' : 'u-displayNone'
     return (
       <svg width="35px" height="35px" className={display} onClick={this.props.pauseTrack} viewBox="901 369 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <desc>Created with Sketch.</desc>
