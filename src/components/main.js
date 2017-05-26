@@ -1,4 +1,5 @@
 import React from 'react'
+import Popup from 'react-popup'
 import Header from './header'
 import Search from './search'
 import Tracks from './tracks'
@@ -34,6 +35,11 @@ export default class Main extends React.Component {
   }
 
   _playTrack ({target}, preview, trackId) {
+    if (preview === null) {
+      Popup.alert('Spotify dont provides a mp3 to this track.', 'Error');
+      return
+    }
+
     if (this.audio) {
       if (trackId === this.state.trackPlaying) {
         this.audio.play()
@@ -75,6 +81,7 @@ export default class Main extends React.Component {
           trackPaused = {this.state.trackPaused}
         />
         <Footer />
+        <Popup />
       </div>
     )
   }
