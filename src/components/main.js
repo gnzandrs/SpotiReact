@@ -25,47 +25,77 @@ export default class Main extends React.Component {
   }
 
   async _searchTracks ({target}) {
-      let {value} = target
+      try {
+        let {value} = target
 
-      if (value) {
-        let results = await fetch(`${this.baseUrl}/search?q=${value}&type=track`)
-        let {tracks} = await results.json()
-        this.setState({tracks: tracks.items})
+        if (value) {
+          let results = await fetch(`${this.baseUrl}/search?q=${value}&type=track`)
+          let {tracks} = await results.json()
+          this.setState({tracks: tracks.items})
+        }
+      }
+      catch (err) {
+        console.log('Error in _searchTracks: ' + err)
+        Popup.alert('Error, please report.', 'Error');
+        return
+      }
+      finally {
+        console.log('_searchTracks ')
       }
   }
 
   _playTrack ({target}, preview, trackId) {
-    if (preview === null) {
-      Popup.alert('Spotify dont provides a mp3 to this track.', 'Error');
-      return
-    }
-
-    if (this.audio) {
-      if (trackId === this.state.trackPlaying) {
-        this.audio.play()
-        return this.setState({trackPaused: true})
+    try {
+      if (preview === null) {
+        Popup.alert('Spotify dont provides a mp3 to this track.', 'Error');
+        return
       }
 
-      this.audio.src = preview
-      this.audio.play()
-    }
-    else {
-        this.audio = new window.Audio(preview)
+      if (this.audio) {
+        if (trackId === this.state.trackPlaying) {
+          this.audio.play()
+          return this.setState({trackPaused: true})
+        }
+
+        this.audio.src = preview
         this.audio.play()
+      }
+      else {
+          this.audio = new window.Audio(preview)
+          this.audio.play()
+      }
+
+      this.setState({trackPlaying: trackId})
+
+      this.audio.addEventListener('ended', (e) => {
+        this.setState({trackPlaying: ''})
+      })
+
+      this.setState({trackPaused: true})
     }
-
-    this.setState({trackPlaying: trackId})
-
-    this.audio.addEventListener('ended', (e) => {
-      this.setState({trackPlaying: ''})
-    })
-
-    this.setState({trackPaused: true})
+    catch (err) {
+      console.log('Error in _playTrack: ' + err)
+      Popup.alert('Error, please report.', 'Error');
+      return
+    }
+    finally {
+      console.log('_playTrack')
+    }
   }
 
   _pauseTrack () {
-    this.setState({trackPaused: false})
-    this.audio.pause()
+    try {
+      this.setState({trackPaused: false})
+      this.audio.pause()
+    }
+    catch (err) {
+      console.log('Error in _pauseTrack: ' + err)
+      Popup.alert('Error, please report.', 'Error');
+      return
+    }
+    finally {
+      console.log('_pauseTrack')
+    }
   }
 
   render () {
