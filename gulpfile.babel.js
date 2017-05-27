@@ -10,8 +10,6 @@ import babelify from 'babelify';
 import uglify from 'gulp-uglify';
 import ifElse from 'gulp-if-else';
 
-watchify.args.debug = true;
-
 const sync = browserSync.create();
 
 // Input file.
