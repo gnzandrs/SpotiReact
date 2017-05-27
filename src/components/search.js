@@ -5,7 +5,7 @@ export default class Search extends React.Component {
     return (
             <div className="row">
               <div className="col-lg-4 col-lg-offset-4">
-                <div className="input-group">
+                <div className="input-group input-group-lg">
                   <input
                     type = 'text'
                     placeholder = 'Write the name of the song...'
